@@ -1,0 +1,14 @@
+Aula 1 - Introdução ao Kubernetes
+
+O kubernetes (k8s) é uma ferramenta de orquestração de containers.
+É um produto OpenSource utilizado para automatizar a implantação, o dimensionamento e o gerenciamento de aplicativos em contêiner
+
+
+Necessidade da ferramenta:
+- Migração de aplicações monolíticas para microserviços
+- Disponibilidade de aplicação (diminuição do downtime)
+- Escalabilidade e alta performance
+- Recuperação de desastre (Backup/Restore)
+
+Aula 2 - Arquitetura básica do Kubernetes
+- oi
