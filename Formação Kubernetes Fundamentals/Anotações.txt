@@ -1,3 +1,5 @@
+# Curso - Introdução a Kubernetes e Orquestração de Containeres
+
 Aula 1 - Introdução ao Kubernetes
 
 O kubernetes (k8s) é uma ferramenta de orquestração de containers.
@@ -11,4 +13,49 @@ Necessidade da ferramenta:
 - Recuperação de desastre (Backup/Restore)
 
 Aula 2 - Arquitetura básica do Kubernetes
-- oi
+- No mínimo, um cluster contém um plano de controle e pelo menos uma máquina ou nó.
+- Pod é a menor unidade do Kubernetes. Normalmente é executado uma aplicação por pod
+
+O que é um Pod?
+É um conjunto de um ou mais containres, sendo a menor unidade de uma aplicação k8s. Os caontainers são agrupados nesses pods para que os recursos sejam compartilhados de modo mais inteligente.
+
+
+
+------------------------------
+
+# Curso - Ambiente de Desenvolvimento Kubernetes
+
+Aula 1 - Criando um cluster Kubernetes com o Minikube
+
+- Minikube é um utilitário que você pode usar para executar o K8s em sua máquina local. Ele cria um cluster de nó único contido em uma máquina virtual. Esse cluster permite que você execute e estude o K8s sem exigir a instalação completa do Kubernetes
+- Link para documentação minikube: https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download
+-Baixar Oracle Virtual Box, baixar o minikube, seguir os passos do tutorial do link acima para instalação. Iniciar a Vm com "minikube start"
+
+Aula 2 - Instalando o kubectl
+
+- O kubectl é a ferramenta de linha de comando do Kubernetes. Permite executar comandos em cluster do k8s. Pode ser usado para implantar aplicativos, inspecionar e gerenciar recursos de cluster e visualizar logs.
+
+- Link para download e tutorial da instalação:
+https://kubernetes.io/pt-br/docs/tasks/tools/
+
+# Curso - Cluster de Produção em Cloud
+
+Aula 1 - Cluster de Kubernetes em Produção
+
+
+- No servidor master é instalado o control plane
+- O srvidor de processaimento (worker) hospeda os pods que são componentes de uma aplicação. O ambiente de gerenciamento gerencia os nós de processamento e os pods no cluster. Em ambientes de produção, o ambiente de gerenciamento é geralmente executado em múltiplos computadores, provendo tolerencia a falhas e alta disponibilidade.
+
+-Principais componentes da camada de gerenciamento:
+kube-apiserver (Valida e configura dados para os objetos presentes no cluster, que incluem pods, serviços, controladores de replicações e outros.)
+etcd (Armazenamento de valores em cluster. Ajuda a viabilizar atualizações autom[áticas mais seguras, coordena a programação de trabalhos em hosts e ajuda a configurar redes de sobreposição para containers. Se destaca por ser o armazenamento de dados principal do k8s)
+kube-scheduler (Atribui pods a nós. Determinar quais nós são os posicionamentos validos para cada pod na fila de agendamento de acordo com as restrições ou recrusos disponíveis)
+kube-controller-manager (Loop que observa o estado compartilhado do cluster por meio do kube-apiserver e faz alterações tentando mover o estado atual para o estado desejado.
+
+
+
+
+
+
+
+
